@@ -1,0 +1,70 @@
+<!-- ============================================================== -->
+<!-- row -->
+<!-- ============================================================== -->
+<div fxLayout="row" fxLayoutWrap="wrap">
+    <!-- Card column -->
+    <div fxFlex.gt-sm="100%" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Formulaire d'ouverture de dossier</mat-card-title>
+                <mat-horizontal-stepper [linear]="isLinear">
+                  <mat-step>
+                    <form>
+                      <ng-template matStepLabel>Informations générales</ng-template>
+                      <mat-form-field>
+                        <input matInput placeholder="Nom de famille">
+                      </mat-form-field>
+                      <mat-form-field>
+                          <input matInput placeholder="Prénom(s)">
+                        </mat-form-field>
+                        <mat-form-field>
+                            <input matInput type="date" placeholder="Date de naissance">
+                          </mat-form-field>
+                        <mat-form-field>
+                            <mat-select placeholder="Pays">
+                              <mat-option value="senegal">Sénégal</mat-option>
+                              <mat-option value="france">France</mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                      <div>
+                        <button mat-raised-button color="warn" matStepperNext>Suivant</button>
+                      </div>
+                    </form>
+                  </mat-step>
+                  <mat-step>
+                    <form>
+                      <ng-template matStepLabel>Informations gérants</ng-template>
+                      <mat-form-field>
+                          <input matInput placeholder="Nom de famille">
+                        </mat-form-field>
+                        <mat-form-field>
+                            <input matInput placeholder="Prénom(s)">
+                          </mat-form-field>
+                      <mat-form-field>
+                        <input matInput placeholder="Address" >
+                      </mat-form-field>
+                      <mat-form-field>
+                          <input matInput type="number" placeholder="Téléphone">
+                        </mat-form-field>
+                      <div>
+                        <button mat-raised-button color="accent" matStepperPrevious>Retour</button>&nbsp;
+                        <button mat-raised-button color="warn" matStepperNext>Suivant</button>
+                      </div>
+                    </form>
+                  </mat-step>
+                  <mat-step>
+                    <ng-template matStepLabel>Validation</ng-template>
+                   
+                    <div>
+                        <button mat-raised-button color="accent">Valider</button>&nbsp;
+                      <button mat-raised-button matStepperPrevious>Retour</button>
+                    </div>
+                  </mat-step>
+                </mat-horizontal-stepper>
+            
+            </mat-card-content>
+             
+        </mat-card>    
+    </div>
+</div>
+

@@ -1,0 +1,46 @@
+<h5 mat-dialog-title class="titrepopup">Création d'un nouveau  document</h5>
+
+<div class="example-container">
+  <mat-form-field>
+    <input matInput placeholder="Nom" type="text">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Prénom" type="text">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Email" type="email">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Fonction" type="text">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-select placeholder="Service">
+      <mat-option value="Service1">Actif</mat-option>
+      <mat-option value="Service2">Inactif</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-select placeholder="Département">
+      <mat-option value="Département1">Actif</mat-option>
+      <mat-option value="Département2">Inactif</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-select placeholder="Statut">
+      <mat-option value="Actif">Actif</mat-option>
+      <mat-option value="Inactif">Inactif</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+
+
+<div mat-dialog-actions>
+  <button mat-raised-button (click)="confirmSelection()" color="primary">Enregistrer</button>
+  <button mat-button (click)="dialogRef.close()">Annuler</button>
+</div>
